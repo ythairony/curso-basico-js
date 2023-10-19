@@ -10,21 +10,19 @@
     <p>Onde você mora?</p> 
     <input type="text" placeholder="Informe o nome do país" id="txtpais">
     <input type="button" value="Verificar" onclick="nation()">
-    <div id="res">
-
-    </div>
+    <div id="res"></div>
 
     <script>
-        var pais = document.getElementById('txtpais')
-        var res = document.querySelector('div#res')
-
+        var pais = document.getElementById('txtpais');
+        var res = document.querySelector('div#res');
         
         function nation() {
-            res.innerHTML = `<p>Você nasceu no ${pais}</p>` 
-            if (pais == 'brasil') {
-                res.innerHTML += '<p>Você é brasileiro</p>'
+            var valorPais = pais.value.toLowerCase(); // Obter o valor do input em letras minúsculas
+            res.innerHTML = `<p>Você nasceu no ${valorPais}</p>`; 
+            if (valorPais === 'brasil') {
+                res.innerHTML += '<p>Você é brasileiro</p>';
             } else {
-                res.innerHTML += '<p>Você é estrangeiro</p>'
+                res.innerHTML += '<p>Você é estrangeiro</p>';
             }
         }
     </script>
