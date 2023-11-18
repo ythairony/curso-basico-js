@@ -1,7 +1,6 @@
 function tabuada() {
     let num = document.getElementById('txtn')
     let tab = document.getElementById('seltab')
-    let res = document.getElementById('res')
     
     if (num.value.length == 0) { // Validador da tabuada, não aceita vazio
         alert('Não consigo gerar uma tabuada sem número')
